@@ -18,19 +18,19 @@ export const transactionColumns: ColumnDef<Transaction>[] = [
   },
   {
     accessorKey: "category",
-    header: "Categoria",
+    header: "Category",
   },
   {
     accessorKey: "paymentMethod",
-    header: "Método de Pagamento",
+    header: "Payment Method",
   },
   {
     accessorKey: "date",
-    header: "Data",
+    header: "Date",
   },
   {
     accessorKey: "amount",
-    header: "Valor",
+    header: "Amount",
   },
   {
     accessorKey: "actions",
