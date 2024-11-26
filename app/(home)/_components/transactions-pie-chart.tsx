@@ -10,7 +10,7 @@ import {
   ChartTooltipContent,
 } from "@/app/_components/ui/chart"
 import { TransactionType } from "@prisma/client"
-import { TransactionPercentagePerType } from "@/app/_data/get-dashboard/types"
+import { TransactionPercentageByType } from "@/app/_data/get-dashboard/types"
 import { PiggyBankIcon, TrendingDownIcon, TrendingUpIcon } from "lucide-react"
 import PercentageItem from "./percentage-item"
 
@@ -30,7 +30,7 @@ const chartConfig = {
 } satisfies ChartConfig
 
 interface TransactionsPieChartProps {
-  typesPercentage: TransactionPercentagePerType
+  typesPercentage: TransactionPercentageByType
   depositsTotal: number
   investmentsTotal: number
   expensesTotal: number
