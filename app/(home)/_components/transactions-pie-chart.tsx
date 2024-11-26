@@ -16,15 +16,15 @@ import PercentageItem from "./percentage-item"
 
 const chartConfig = {
   [TransactionType.INVESTMENT]: {
-    label: "Investido",
+    label: "Investments",
     color: "#FFFFFF",
   },
   [TransactionType.DEPOSIT]: {
-    label: "Receita",
+    label: "Deposit",
     color: "#55B02E",
   },
   [TransactionType.EXPENSE]: {
-    label: "Despesas",
+    label: "Expenses",
     color: "#E93030",
   },
 } satisfies ChartConfig
@@ -83,17 +83,17 @@ const TransactionsPieChart = ({
         <div className="space-y-3">
           <PercentageItem
             icon={<TrendingUpIcon size={16} className="text-primary" />}
-            title="Receita"
+            title="Deposits"
             value={typesPercentage[TransactionType.DEPOSIT]}
           />
           <PercentageItem
             icon={<TrendingDownIcon size={16} className="text-red-500" />}
-            title="Despesas"
+            title="Expenses"
             value={typesPercentage[TransactionType.EXPENSE]}
           />
           <PercentageItem
             icon={<PiggyBankIcon size={16} />}
-            title="Investido"
+            title="Investments"
             value={typesPercentage[TransactionType.INVESTMENT]}
           />
         </div>
