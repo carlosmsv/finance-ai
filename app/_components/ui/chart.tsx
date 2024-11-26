@@ -4,6 +4,7 @@ import * as React from "react"
 import * as RechartsPrimitive from "recharts"
 
 import { cn } from "@/app/_lib/utils"
+import { formatCurrency } from "@/app/_utils/currency"
 
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
@@ -239,7 +240,7 @@ const ChartTooltipContent = React.forwardRef<
                         </span>
                         {item.value && (
                           <span className="font-mono font-medium tabular-nums text-foreground">
-                            US${item.value.toLocaleString()}
+                            {formatCurrency(Number(item.value))}
                           </span>
                         )}
                       </div>
