@@ -20,7 +20,7 @@ const chartConfig = {
     color: "#FFFFFF",
   },
   [TransactionType.DEPOSIT]: {
-    label: "Deposit",
+    label: "Deposits",
     color: "#55B02E",
   },
   [TransactionType.EXPENSE]: {
