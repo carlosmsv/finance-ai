@@ -6,13 +6,10 @@ import TransactionTypeBadge from "../_components/type-badge"
 import { Button } from "@/app/_components/ui/button"
 import { TrashIcon } from "lucide-react"
 import EditTransactionButton from "../_components/edit-transaction-button"
-
-export const convertToTitleCase = (str: string) => {
-  return str
-    .split("_")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join(" ")
-}
+import {
+  TRANSACTION_CATEGORY_LABELS,
+  TRANSACTION_PAYMENT_METHOD_LABELS,
+} from "@/app/_constants/transactions"
 
 export const transactionColumns: ColumnDef<Transaction>[] = [
   {
@@ -30,13 +27,13 @@ export const transactionColumns: ColumnDef<Transaction>[] = [
     accessorKey: "category",
     header: "Category",
     cell: ({ row: { original: transaction } }) =>
-      convertToTitleCase(transaction.category),
+      TRANSACTION_CATEGORY_LABELS[transaction.category],
   },
   {
     accessorKey: "paymentMethod",
     header: "Payment Method",
     cell: ({ row: { original: transaction } }) =>
-      convertToTitleCase(transaction.paymentMethod),
+      TRANSACTION_PAYMENT_METHOD_LABELS[transaction.paymentMethod],
   },
   {
     accessorKey: "date",

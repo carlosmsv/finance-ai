@@ -1,86 +1,116 @@
-import { TransactionType } from "@prisma/client"
+import {
+  TransactionCategory,
+  TransactionPaymentMethod,
+  TransactionType,
+} from "@prisma/client"
+
+export const TRANSACTION_CATEGORY_LABELS = {
+  EDUCATION: "Education",
+  ENTERTAINMENT: "Entertainment",
+  FOOD: "Food",
+  HEALTH: "Health",
+  HOUSING: "Housing",
+  OTHER: "Other",
+  SALARY: "Salary",
+  TRANSPORTATION: "Transportation",
+  UTILITY: "Utility",
+}
+
+export const TRANSACTION_PAYMENT_METHOD_LABELS = {
+  BANK_TRANSFER: "Bank Transfer",
+  BANK_SLIP: "Bank Slip",
+  CASH: "Cash",
+  CREDIT_CARD: "Credit Card",
+  DEBIT_CARD: "Debit Card",
+  OTHER: "Other",
+  PIX: "Pix",
+}
 
 export const TRANSACTION_TYPE_OPTIONS = [
   {
     value: TransactionType.EXPENSE,
-    label: "Expense",
+    label: "Despesa",
   },
   {
     value: TransactionType.DEPOSIT,
-    label: "Deposit",
+    label: "Depósito",
   },
   {
     value: TransactionType.INVESTMENT,
-    label: "Investment",
-  },
-]
-
-export const TRANSACTION_CATEGORY_OPTIONS = [
-  {
-    value: "HOUSING",
-    label: "Housing",
-  },
-  {
-    value: "TRANSPORTATION",
-    label: "Transportation",
-  },
-  {
-    value: "FOOD",
-    label: "Food",
-  },
-  {
-    value: "ENTERTAINMENT",
-    label: "Entertainment",
-  },
-  {
-    value: "HEALTH",
-    label: "Health",
-  },
-  {
-    value: "UTILITY",
-    label: "Utility",
-  },
-  {
-    value: "SALARY",
-    label: "Salary",
-  },
-  {
-    value: "EDUCATION",
-    label: "Education",
-  },
-  {
-    value: "OTHER",
-    label: "Other",
+    label: "Investimento",
   },
 ]
 
 export const TRANSACTION_PAYMENT_METHOD_OPTIONS = [
   {
-    value: "CREDIT_CARD",
-    label: "Credit Card",
+    value: TransactionPaymentMethod.BANK_TRANSFER,
+    label:
+      TRANSACTION_PAYMENT_METHOD_LABELS[TransactionPaymentMethod.BANK_TRANSFER],
   },
   {
-    value: "DEBIT_CARD",
-    label: "Debit Card",
+    value: TransactionPaymentMethod.BANK_SLIP,
+    label:
+      TRANSACTION_PAYMENT_METHOD_LABELS[TransactionPaymentMethod.BANK_SLIP],
   },
   {
-    value: "BANK_TRANSFER",
-    label: "Bank Transfer",
+    value: TransactionPaymentMethod.CASH,
+    label: TRANSACTION_PAYMENT_METHOD_LABELS[TransactionPaymentMethod.CASH],
   },
   {
-    value: "BANK_SLIP",
-    label: "Bank Slip",
+    value: TransactionPaymentMethod.CREDIT_CARD,
+    label:
+      TRANSACTION_PAYMENT_METHOD_LABELS[TransactionPaymentMethod.CREDIT_CARD],
   },
   {
-    value: "CASH",
-    label: "Cash",
+    value: TransactionPaymentMethod.DEBIT_CARD,
+    label:
+      TRANSACTION_PAYMENT_METHOD_LABELS[TransactionPaymentMethod.DEBIT_CARD],
   },
   {
-    value: "PIX",
-    label: "Pix",
+    value: TransactionPaymentMethod.OTHER,
+    label: TRANSACTION_PAYMENT_METHOD_LABELS[TransactionPaymentMethod.OTHER],
   },
   {
-    value: "OTHER",
-    label: "Other",
+    value: TransactionPaymentMethod.PIX,
+    label: TRANSACTION_PAYMENT_METHOD_LABELS[TransactionPaymentMethod.PIX],
+  },
+]
+
+export const TRANSACTION_CATEGORY_OPTIONS = [
+  {
+    value: TransactionCategory.EDUCATION,
+    label: TRANSACTION_CATEGORY_LABELS[TransactionCategory.EDUCATION],
+  },
+  {
+    value: TransactionCategory.ENTERTAINMENT,
+    label: TRANSACTION_CATEGORY_LABELS[TransactionCategory.ENTERTAINMENT],
+  },
+  {
+    value: TransactionCategory.FOOD,
+    label: TRANSACTION_CATEGORY_LABELS[TransactionCategory.FOOD],
+  },
+  {
+    value: TransactionCategory.HEALTH,
+    label: TRANSACTION_CATEGORY_LABELS[TransactionCategory.HEALTH],
+  },
+  {
+    value: TransactionCategory.HOUSING,
+    label: TRANSACTION_CATEGORY_LABELS[TransactionCategory.HOUSING],
+  },
+  {
+    value: TransactionCategory.OTHER,
+    label: TRANSACTION_CATEGORY_LABELS[TransactionCategory.OTHER],
+  },
+  {
+    value: TransactionCategory.SALARY,
+    label: TRANSACTION_CATEGORY_LABELS[TransactionCategory.SALARY],
+  },
+  {
+    value: TransactionCategory.TRANSPORTATION,
+    label: TRANSACTION_CATEGORY_LABELS[TransactionCategory.TRANSPORTATION],
+  },
+  {
+    value: TransactionCategory.UTILITY,
+    label: TRANSACTION_CATEGORY_LABELS[TransactionCategory.UTILITY],
   },
 ]
