@@ -41,7 +41,7 @@ import {
 } from "@prisma/client"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { upsertTransaction } from "../_actions/upsert-transaction"
+import { upsertTransaction } from "../subscription/_actions/upsert-transaction"
 
 const formSchema = z.object({
   name: z
