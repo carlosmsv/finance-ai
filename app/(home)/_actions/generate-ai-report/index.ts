@@ -14,7 +14,10 @@ export const generateAiReport = async ({ month }: GenerateAiReportSchema) => {
   if (!userId) {
     throw new Error("Unauthorized")
   }
-  const user = await clerkClient().users.getUser(userId)
+  const client = await clerkClient()
+
+  const user = await client.users.getUser(userId)
+
   const hasPremiumPlan = user.publicMetadata.subscriptionPlan === "premium"
   if (!hasPremiumPlan) {
     throw new Error("You need a premium plan to generate AI reports")
